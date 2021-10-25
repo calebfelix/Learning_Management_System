@@ -1,0 +1,669 @@
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+  nav {
+      background: black;
+      padding: 15px;
+  }
+  
+  nav {
+      width: 100%;
+  }
+  
+  .Navigation {
+      color: black;
+      font-family: 'Voltaire', sans-serif;
+      display: flex !important;
+      padding: 10px;
+  }
+  
+  .navbar-brand {
+      color: white;
+      padding-right: 100px;
+      text-decoration: underline;
+  }
+  
+  .navbar-btn {
+      display: flex;
+      margin-left: 950px;
+  }
+  
+  a {
+      text-decoration: none;
+      color: inherit;
+  }
+  
+  .btn {
+      margin-left: 20px;
+      border-radius: 5px;
+      color: black;
+      text-decoration: none;
+      background: rgb(0, 255, 85); 
+      padding-left: 20px;
+      padding: 5px;
+      transform: scale(0.85);
+  }
+  
+  .formImage {
+      max-width: 100%;
+      z-index: -2;
+  }
+  /*========================================================================LOG IN PAGE================================================================================*/
+  
+  .login-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, .5);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+      border-radius: 10px;
+      font-family: 'Voltaire', sans-serif;
+  }
+  
+  .login-box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #03e9f4;
+      text-align: center;
+      text-decoration: underline;
+  }
+  
+  .login-box .user-box {
+      position: relative;
+  }
+  
+  .login-box .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+  }
+  
+  .login-box .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: .5s;
+  }
+  
+  .login-box .user-box input:focus~label,
+  .login-box .user-box input:valid~label {
+      top: -20px;
+      left: 0;
+      color: #03e9f4;
+      font-size: 12px;
+  }
+  
+  .login-box form button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #03e9f4;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 40px;
+      letter-spacing: 4px
+  }
+  
+  .login-box button:hover {
+      background: #03e9f4;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+  }
+  
+  .login-box button span {
+      position: absolute;
+      display: block;
+  }
+  
+  .login-box button span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+      animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+      0% {
+          left: -100%;
+      }
+      50%,
+      100% {
+          left: 100%;
+      }
+  }
+  
+  .login-box button span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #03e9f4);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+      0% {
+          top: -100%;
+      }
+      50%,
+      100% {
+          top: 100%;
+      }
+  }
+  
+  .login-box button span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #03e9f4);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+      0% {
+          right: -100%;
+      }
+      50%,
+      100% {
+          right: 100%;
+      }
+  }
+  
+  .login-box button span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #03e9f4);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+      0% {
+          bottom: -100%;
+      }
+      50%,
+      100% {
+          bottom: 100%;
+      }
+  }
+  
+  .login-box button {
+      background-color: Transparent;
+      background-repeat: no-repeat;
+      border: none;
+      z-index: 10;
+  }
+  /*=========================================================================SIGN UP REGISTER PAGE============================================================================*/
+  
+  .signup-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, .5);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+      border-radius: 10px;
+      font-family: 'Voltaire', sans-serif;
+  }
+  
+  .signup-box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #1eff00;
+      text-align: center;
+      text-decoration: underline;
+  }
+  
+  .signup-box .user-box {
+      position: relative;
+  }
+  
+  .signup-box .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+  }
+  
+  .signup-box .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: .5s;
+  }
+  
+  .signup-box .user-box input:focus~label,
+  .signup-box .user-box input:valid~label {
+      top: -20px;
+      left: 0;
+      color: #1eff00;
+      font-size: 12px;
+  }
+  
+  .signup-box form button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #1eff00;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 40px;
+      letter-spacing: 4px
+  }
+  
+  .signup-box button:hover {
+      background: #1eff00;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #1eff00, 0 0 25px #1eff00, 0 0 50px #1eff00, 0 0 100px #1eff00;
+  }
+  
+  .signup-box button span {
+      position: absolute;
+      display: block;
+  }
+  
+  .signup-box button span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #1eff00);
+      animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+      0% {
+          left: -100%;
+      }
+      50%,
+      100% {
+          left: 100%;
+      }
+  }
+  
+  .signup-box button span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #1eff00);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+      0% {
+          top: -100%;
+      }
+      50%,
+      100% {
+          top: 100%;
+      }
+  }
+  
+  .signup-box button span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #1eff00);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+      0% {
+          right: -100%;
+      }
+      50%,
+      100% {
+          right: 100%;
+      }
+  }
+  
+  .signup-box span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #1eff00);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+      0% {
+          bottom: -100%;
+      }
+      50%,
+      100% {
+          bottom: 100%;
+      }
+  }
+  
+  .signup-box button {
+      background-color: Transparent;
+      background-repeat: no-repeat;
+      border: none;
+      ;
+  }
+  /*================================================================================User Profile========================================================================*/
+  
+  .profile-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, .5);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+      border-radius: 10px;
+      font-family: 'Voltaire', sans-serif;
+  }
+  
+  .profile-box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #d400ff;
+      text-align: center;
+      text-decoration: underline;
+  }
+  
+  .profile-box .user-box {
+      position: relative;
+  }
+  
+  .profile-box .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+  }
+  
+  .profile-box .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: .5s;
+  }
+  
+  .profile-box .user-box input:focus~label,
+  .profile-box .user-box input:valid~label {
+      top: -20px;
+      left: 0;
+      color: #d400ff;
+      font-size: 12px;
+  }
+  
+  .profile-box form a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #d400ff;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 40px;
+      letter-spacing: 4px
+  }
+  
+  .profile-box a:hover {
+      background: #d400ff;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #d400ff, 0 0 25px #d400ff, 0 0 50px #d400ff, 0 0 100px #d400ff;
+  }
+  
+  .profile-box a span {
+      position: absolute;
+      display: block;
+  }
+  
+  .profile-box a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d400ff);
+      animation: btn-anim1 1s linear infinite;
+  }
+  
+  .file input {
+      opacity: 0;
+      margin-right: 10px;
+  }
+  
+  .Profile-Upload {
+      background: #d400ff;
+      border-radius: 5px;
+      padding: 5px;
+  }
+  
+  @keyframes btn-anim1 {
+      0% {
+          left: -100%;
+      }
+      50%,
+      100% {
+          left: 100%;
+      }
+  }
+  
+  .profile-box a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #d400ff);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+      0% {
+          top: -100%;
+      }
+      50%,
+      100% {
+          top: 100%;
+      }
+  }
+  
+  .profile-box a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #d400ff);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+      0% {
+          right: -100%;
+      }
+      50%,
+      100% {
+          right: 100%;
+      }
+  }
+  
+  .profile-box a span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #d400ff);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+      0% {
+          bottom: -100%;
+      }
+      50%,
+      100% {
+          bottom: 100%;
+      }
+  }
+  /*================================================================================FOOTER========================================================================*/
+  
+  .footer {
+      position: relative;
+      z-index: 10;
+      max-width: 70%;
+      margin: 1rem auto;
+      overflow: auto;
+  }
+  
+  .footer,
+  .footer a {
+      color: #999;
+      font-size: 0.9rem;
+  }
+  
+  .footer p {
+      margin-bottom: 1.5rem;
+  }
+  
+  .footer .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+  }
+  
+  .footer li {
+      line-height: 1.9;
+  }
+  
+  .footer .lang-select {
+      margin-top: 2rem;
+      color: #999;
+      background-color: #fff;
+      border: 1px solid #333;
+      padding: 1rem 1.2rem;
+      border-radius: 5px;
+  }
+  /*============================================================================FADE ANIMATION============================================================================*/
+  
+  body {
+      background: black;
+      -webkit-animation: fadein 3s;
+      /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 3s;
+      /* Firefox < 16 */
+      -ms-animation: fadein 3s;
+      /* Internet Explorer */
+      -o-animation: fadein 3s;
+      /* Opera < 12.1 */
+      animation: fadein 3s;
+  }
+  
+  @keyframes fadein {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  /* Firefox < 16 */
+  
+  @-moz-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  /* Safari, Chrome and Opera > 12.1 */
+  
+  @-webkit-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  /* Internet Explorer */
+  
+  @-ms-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  /* Opera < 12.1 */
+  
+  @-o-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
