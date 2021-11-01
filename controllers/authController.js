@@ -106,8 +106,13 @@ module.exports.task_get = (req, res) => {
 }
 
 module.exports.task_post = async(req, res) => {
+    
+    const token = req.cookies.jwt;
+    const decoded =await jwt.verify(token, 'XIAO WHEN')
+    
     const todoTask = new TodoTask({
-        content: req.body.content
+        content: req.body.content,
+        user_id: decoded.id._id
     });
     try {
         console.log(req.body.content);
