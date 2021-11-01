@@ -99,8 +99,12 @@ module.exports.courses_get = (req, res) => {
     res.render('courses');
 }
 
-module.exports.task_get = (req, res) => {
-    TodoTask.find({}, (err, tasks) => {
+module.exports.task_get = async (req, res) => {
+    
+    const token = req.cookies.jwt;
+    const decoded = await jwt.verify(token, 'XIAO WHEN')
+    
+    TodoTask.find({user_id: decoded.id._id}, (err, tasks) => {
         res.render("tasks.ejs", { todoTasks: tasks });
     });
 }
